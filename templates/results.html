@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Backlink Finder - Results</title>
+</head>
+<body>
+    <h1>Backlink Finder - Results</h1>
+    <p>Backlinks found on <strong>{{ url }}</strong>:</p>
+    <ul>
+        {% for backlink in backlinks %}
+            <li><a href="{{ backlink }}">{{ backlink }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backlink Finder - Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            animation: animateBackground 10s ease infinite;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes animateBackground {
+            0% {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+            50% {
+            background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
+            }
+            100% {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        li {
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center; /* Center-align the list items */
+            border: rgba(255, 255, 255, 0.8) solid; /* Add border to each list item */
+            padding: 10px; /* Add padding for spacing */
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.2s;
+            word-wrap: break-word; /* Wrap long links within the anchor */
+            display: block; /* Display links as block elements to take full width of parent li */
+            max-width: 100%;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Backlink Finder - Results</h1>
+    <p style="text-align: center;">Backlinks found on <strong>{{ url }}</strong>:</p>
+    <ul style="list-style: none;">
+        {% for backlink in backlinks %}
+            <li ><a href="{{ backlink }}">{{ backlink }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
